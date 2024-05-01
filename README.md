@@ -53,9 +53,9 @@ sudo cp -r bts-site/bts/.well-known/ /var/www/bts-ssl/.well-known; sudo chown ww
 git clone https://github.com/psignoret/aad-sso-wordpress.git
 sudo cp -r aad-sso-wordpress/ /var/www/bts-ssl/wp-content/plugins/
 sudo rm -rf mediawiki-* /var/www/bts-wiki
-wget https://releases.wikimedia.org/mediawiki/1.39/mediawiki-1.39.5.tar.gz; tar -xzvf mediawiki-*.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.39/mediawiki-1.39.7.tar.gz; tar -xzvf mediawiki-*.tar.gz
 sudo cp -r mediawiki-*/ /var/www/bts-wiki; sudo chown www-data -R /var/www
 # browse to site, run install wizard & generate LocalSettings.php, download file, then add to install & recopy dir to web location
-nano mediawiki-1.39.5/LocalSettings.php
+nano mediawiki-1.39.7/LocalSettings.php
 sudo rm -rf /var/www/bts-wiki; sudo cp -r mediawiki-*/ /var/www/bts-wiki; sudo chown www-data -R /var/www
 ```

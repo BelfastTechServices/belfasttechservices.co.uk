@@ -22,7 +22,7 @@ sudo cp -r bts-site/bts/ /var/www/bts-ssl; sudo chown www-data -R /var/www
 ```
 nano bts-site/bts-ssl.conf
 sudo cp bts-site/bts-ssl.conf /etc/apache2/sites-available/bts-ssl.conf; sudo a2ensite bts-ssl; sudo service apache2 restart
-sudo certbot --apache -d belfasttechservices.co.uk -d www.belfasttechservices.co.uk -d mta-sts.belfasttechservices.co.uk --agree-tos --renew-by-default --no-redirect
+sudo certbot --apache -d belfasttechservices.co.uk -d www.belfasttechservices.co.uk --agree-tos --renew-by-default --no-redirect
 nano bts-site/bts-wiki.conf
 sudo cp bts-site/bts-wiki.conf /etc/apache2/sites-available/bts-wiki.conf; sudo a2ensite bts-wiki; sudo service apache2 restart
 sudo certbot --apache -d wiki.belfasttechservices.co.uk -d www.wiki.belfasttechservices.co.uk --agree-tos --renew-by-default --no-redirect

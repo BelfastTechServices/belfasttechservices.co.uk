@@ -50,6 +50,7 @@ wget https://wordpress.org/latest.tar.gz; tar -xzvf latest.tar.gz; rm latest.tar
 nano wordpress/wp-config-sample.php; cp wordpress/wp-config-sample.php wordpress/wp-config.php
 sudo cp -r wordpress/ /var/www/bts-ssl; sudo chown www-data -R /var/www
 sudo cp -r bts-site/bts/.well-known/ /var/www/bts-ssl/.well-known; sudo chown www-data -R /var/www
+sudo cp -r bts-site/bts/atlassian-domain-verification-4b0j94cc-a885-101k-653k-c9adc33a230a.html /var/www/bts-ssl/atlassian-domain-verification-4b0j94cc-a885-101k-653k-c9adc33a230a.html; sudo chown www-data -R /var/www
 git clone https://github.com/psignoret/aad-sso-wordpress.git
 sudo cp -r aad-sso-wordpress/ /var/www/bts-ssl/wp-content/plugins/
 sudo rm -rf mediawiki-* /var/www/bts-wiki
